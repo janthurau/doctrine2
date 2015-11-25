@@ -43,7 +43,7 @@ class PreUpdateEventArgs extends LifecycleEventArgs
      * @param EntityManagerInterface $em
      * @param array                  $changeSet
      */
-    public function __construct($entity, EntityManagerInterface $em, array &$changeSet)
+    public function __construct($entity, EntityManagerInterface $em, &$changeSet)
     {
         if( null === $changeSet ){
             $changeSet = [];
