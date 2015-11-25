@@ -45,6 +45,10 @@ class PreUpdateEventArgs extends LifecycleEventArgs
      */
     public function __construct($entity, EntityManagerInterface $em, array &$changeSet)
     {
+        if( null === $changeSet ){
+            $changeSet = [];
+        }
+
         parent::__construct($entity, $em);
 
         $this->entityChangeSet = &$changeSet;
